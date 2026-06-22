@@ -1,0 +1,5 @@
+# HelloWorld.ra
+# RA Language example — Hello World
+
+p "Hello, RA Language!" l
+p "Welcome to the RA programming language." l

@@ -1,0 +1,34 @@
+# TodoManager.ra
+# RA Language example — Simple todo list manager
+
+tasks = ["Buy groceries", "Write code", "Review PRs"] l
+
+loop l
+    p "=== Todo Manager ===" l
+    p "1. List tasks" l
+    p "2. Add task" l
+    p "3. Remove task" l
+    p "4. Exit" l
+    input choice "Choose: " l
+
+    if choice == 1 l
+        p "Tasks:" l
+        for i, task in tasks l
+            p i + 1 + ". " + task l
+    elif choice == 2 l
+        input new_task "Enter new task: " l
+        tasks += new_task l
+        p "Task added!" l
+    elif choice == 3 l
+        input idx "Enter task number to remove: " l
+        idx -= 1 l
+        if idx >= 0 and idx < len(tasks) l
+            remove tasks[idx] from tasks l
+            p "Task removed!" l
+        else l
+            p "Invalid task number" l
+    elif choice == 4 l
+        p "Goodbye!" l
+        end l
+    else l
+        p "Invalid choice" l

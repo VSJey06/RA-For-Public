@@ -1,0 +1,20 @@
+# Calculator.ra
+# RA Language example — Simple calculator
+
+input a "Enter first number: " l
+input b "Enter second number: " l
+input op "Enter operation (+, -, *, /): " l
+
+if op == "+" l
+    c = a + b l
+elif op == "-" l
+    c = a - b l
+elif op == "*" l
+    c = a * b l
+elif op == "/" l
+    c = a / b l
+else l
+    p "Invalid operation" l
+    end l
+
+p "Result: " + c l
