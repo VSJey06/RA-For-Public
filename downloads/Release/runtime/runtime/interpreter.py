@@ -36,14 +36,10 @@ from parser.ra_ast import (
     MethodNode,
     Node,
 <<<<<<< HEAD
-<<<<<<< HEAD
     ObjectDeclarationNode,
 =======
     ObjectNode,
 >>>>>>> 9db417a70944b9fb1c614f61ac12df379b66226d
-=======
-    ObjectNode,
->>>>>>> bac7eaf5a843b3d112ff28c680b339408d38bb9f
     OOPNode,
     PFNode,
     PrintNode,
@@ -199,14 +195,10 @@ class Runtime:
         elif isinstance(node, MethodNode):
             self._execute_method(node)
 <<<<<<< HEAD
-<<<<<<< HEAD
         elif isinstance(node, ObjectDeclarationNode):
 =======
         elif isinstance(node, ObjectNode):
 >>>>>>> 9db417a70944b9fb1c614f61ac12df379b66226d
-=======
-        elif isinstance(node, ObjectNode):
->>>>>>> bac7eaf5a843b3d112ff28c680b339408d38bb9f
             self._execute_object(node)
         elif isinstance(node, PropertyAssignmentNode):
             self._execute_property_assignment(node)
@@ -730,14 +722,10 @@ class Runtime:
             self.executor.execute_nodes(method.body)
 
 <<<<<<< HEAD
-<<<<<<< HEAD
     def _execute_object(self, node: ObjectDeclarationNode) -> None:
 =======
     def _execute_object(self, node: ObjectNode) -> None:
 >>>>>>> 9db417a70944b9fb1c614f61ac12df379b66226d
-=======
-    def _execute_object(self, node: ObjectNode) -> None:
->>>>>>> bac7eaf5a843b3d112ff28c680b339408d38bb9f
         """Instantiate an object from a registered class.
 
         When OOP is active the constructor body is executed immediately

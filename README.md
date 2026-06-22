@@ -66,20 +66,19 @@ io.print "Hello, " name "! Welcome to RA." l
 ```ra
 # Object-oriented example
 
-import "math" as math
-
-@Cls Calculator
-    M add a, b
-        r a + b
-    /
-    M multiply a, b
-        r a * b
+@Cls Greeter
+    M SayHello
+        p "Hello from RA!"
     /
 /
 
-calc = Calculator.new l
-result = calc.add 10, 20 l
-p "Result: " result l
+# Primary syntax
+Obj.Greeter.g
+
+# Alias syntax (equivalent)
+g : Obj.Greeter
+
+g.SayHello.run
 ```
 
 ---
